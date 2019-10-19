@@ -193,22 +193,6 @@
 },
 {
   "model": "webapp.choice",
-  "pk": 18,
-  "fields": {
-    "text": "Electronic",
-    "poll": 6
-  }
-},
-{
-  "model": "webapp.choice",
-  "pk": 19,
-  "fields": {
-    "text": "Rock",
-    "poll": 6
-  }
-},
-{
-  "model": "webapp.choice",
   "pk": 20,
   "fields": {
     "text": "POP",
@@ -253,6 +237,22 @@
   "fields": {
     "text": "No one",
     "poll": 7
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 27,
+  "fields": {
+    "text": "Electronic",
+    "poll": 6
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 28,
+  "fields": {
+    "text": "Rock",
+    "poll": 6
   }
 },
 {
