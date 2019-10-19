@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block menu %}
+{#    <li><a href="{% url 'comment_add' %}">Add Comment</a></li>#}
+{% endblock %}
+
+{% block content %}
+    <h1>Answers:</h1>
+    {% if is_paginated %}
+        {% include 'partial/pagination.html' %}
+    {% endif %}
+    {% for choice in choices %}
+        <div class="comment">
+            <p>To poll: <a href="{% url 'poll_view' choice.poll.pk %}">{{ choice.poll }}</a></p>
+            <div class="pre">{{ choice.text }}</div>
+            <p class="comment-links">
+                <a href="{% url 'choice_update' choice.pk %}">Edit</a>
+                <a href="{% url 'choice_delete' choice.pk %}">Delete</a>
+            </p>
+        </div>
+    {% empty %}
+        <p>No answers yet.</p>
+    {% endfor %}
+    {% if is_paginated %}
+        {% include 'partial/pagination.html' %}
+    {% endif %}
+{% endblock %}

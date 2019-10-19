@@ -1,10 +1,266 @@
 [
 {
+  "model": "webapp.poll",
+  "pk": 1,
+  "fields": {
+    "question": "Do you prefer Tea or Coffee?",
+    "created_date": "2019-10-19T08:08:04.590Z"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 2,
+  "fields": {
+    "question": "Do you like Game of Thrones?",
+    "created_date": "2019-10-19T08:41:50.917Z"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 3,
+  "fields": {
+    "question": "What season do you prefer?",
+    "created_date": "2019-10-19T09:21:54.298Z"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 4,
+  "fields": {
+    "question": "What fast food do you like the most?",
+    "created_date": "2019-10-19T09:23:20.651Z"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 5,
+  "fields": {
+    "question": "What is your favorite fruit?",
+    "created_date": "2019-10-19T09:35:49.256Z"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 6,
+  "fields": {
+    "question": "What music do you listening?",
+    "created_date": "2019-10-19T09:37:43.189Z"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 7,
+  "fields": {
+    "question": "What transport do you prefer?",
+    "created_date": "2019-10-19T09:38:56.937Z"
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 1,
+  "fields": {
+    "text": "Tea",
+    "poll": 1
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 2,
+  "fields": {
+    "text": "Coffee",
+    "poll": 1
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 3,
+  "fields": {
+    "text": "Bourbon!",
+    "poll": 1
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 4,
+  "fields": {
+    "text": "Yes",
+    "poll": 2
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 5,
+  "fields": {
+    "text": "No",
+    "poll": 2
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 6,
+  "fields": {
+    "text": "What is that?",
+    "poll": 2
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 7,
+  "fields": {
+    "text": "Summer",
+    "poll": 3
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 8,
+  "fields": {
+    "text": "Fall",
+    "poll": 3
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 9,
+  "fields": {
+    "text": "Spring",
+    "poll": 3
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 10,
+  "fields": {
+    "text": "Winter",
+    "poll": 3
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 11,
+  "fields": {
+    "text": "Kebab",
+    "poll": 4
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 12,
+  "fields": {
+    "text": "Burgers",
+    "poll": 4
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 13,
+  "fields": {
+    "text": "Pizza",
+    "poll": 4
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 14,
+  "fields": {
+    "text": "Apple",
+    "poll": 5
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 15,
+  "fields": {
+    "text": "Orange",
+    "poll": 5
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 16,
+  "fields": {
+    "text": "Peach",
+    "poll": 5
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 17,
+  "fields": {
+    "text": "Other",
+    "poll": 5
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 18,
+  "fields": {
+    "text": "Electronic",
+    "poll": 6
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 19,
+  "fields": {
+    "text": "Rock",
+    "poll": 6
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 20,
+  "fields": {
+    "text": "POP",
+    "poll": 6
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 21,
+  "fields": {
+    "text": "Other",
+    "poll": 6
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 22,
+  "fields": {
+    "text": "Car",
+    "poll": 7
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 23,
+  "fields": {
+    "text": "Train",
+    "poll": 7
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 24,
+  "fields": {
+    "text": "Airplane",
+    "poll": 7
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 25,
+  "fields": {
+    "text": "No one",
+    "poll": 7
+  }
+},
+{
   "model": "auth.user",
   "pk": 1,
   "fields": {
     "password": "pbkdf2_sha256$150000$cYpHTUaaeIlV$faEOrfqcAV/zRFyR+CrzFZVX2gm0mR+itgtHW/qiRN0=",
-    "last_login": null,
+    "last_login": "2019-10-19T06:47:39.966Z",
     "is_superuser": true,
     "username": "admin",
     "first_name": "",

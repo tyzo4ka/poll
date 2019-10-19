@@ -20,19 +20,19 @@
         {% for choice in choices %}
             <div class="answer">
                 <p>{{ choice.text }}</p>
-{#                <p class="choice-links">#}
-{#                    <a href="{% url 'choice_update' choice.pk %}">Edit</a>#}
-{#                    <a href="{% url 'choice_delete' choice.pk %}">Delete</a>#}
-{#                </p>#}
+                <p class="choice-links">
+                    <a href="{% url 'choice_update' choice.pk %}">Edit</a>
+                    <a href="{% url 'choice_delete' choice.pk %}">Delete</a>
+                </p>
             </div>
         {% empty %}
-            <p>No comments yet.</p>
+            <p>No answers yet.</p>
         {% endfor %}
     </div>
     {% if is_paginated %}
         {% include 'partial/pagination.html' %}
     {% endif %}
-{#    <form action="{% url 'poll_choice_create' poll.pk %}" method="POST" id="add_comment">#}
-{#        {% include 'partial/form.html' with button_text='Add' %}#}
+    <form action="{% url 'poll_choice_create' poll.pk %}" method="POST" id="add_choice">
+        {% include 'partial/form.html' with button_text='Add' %}
     </form>
 {% endblock %}

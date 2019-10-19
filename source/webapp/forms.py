@@ -8,16 +8,16 @@ class PollForm(forms.ModelForm):
         exclude = ['created_date']
 
 
-class CommentForm(forms.ModelForm):
+class ChoiceForm(forms.ModelForm):
     class Meta:
         model = Choice
         exclude = []
 
 
-# class ArticleCommentForm(forms.ModelForm):
-#     class Meta:
-#         model = Comment
-#         fields = ['author', 'text']
+class PollChoiceForm(forms.ModelForm):
+    class Meta:
+        model = Choice
+        fields = ['text']
 #
 #
 # class SimpleSearchForm(forms.Form):
