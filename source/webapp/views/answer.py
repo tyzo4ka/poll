@@ -22,3 +22,6 @@ class AnswerIndexView(View):
         answer.choice = choice
         answer.save()
         return redirect('index')
+
+# class StatisticsView(View):
+#     def get
