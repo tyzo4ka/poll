@@ -13,15 +13,19 @@ class AnswerIndexView(View):
         return get_object_or_404(Poll, pk=poll_pk)
 
     def post(self, request, *args, **kwargs):
-        poll_id = kwargs.get('pk')
-        choice_id = int(request.POST.get('answer'))
-        poll = get_object_or_404(Poll, pk=poll_id)
-        choice = get_object_or_404(Choice, pk=choice_id)
+        pk = kwargs.get('pk')
+        poll = get_object_or_404(Poll, pk=pk)
+        choice_pk = int(request.POST.get("answer"))
+        choice = get_object_or_404(Choice, pk=choice_pk)
         answer = Answer()
         answer.poll = poll
         answer.choice = choice
         answer.save()
-        return redirect('index')
+        return redirect("index")
 
-# class StatisticsView(View):
-#     def get
+
+class StatisticsView(View):
+    def get(self, request, *args, **kwargs):
+        pk = kwargs.get("pk")
+        poll = get_object_or_404(Poll, pk=pk)
+        choices = poll.choices.all().values("pk")
