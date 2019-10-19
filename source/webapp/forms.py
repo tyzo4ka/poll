@@ -19,7 +19,4 @@ class PollChoiceForm(forms.ModelForm):
         model = Choice
         fields = ['text']
 
-class AnswerForm(forms.ModelForm):
-    class Meta:
-        model = Answer
-        fields
+

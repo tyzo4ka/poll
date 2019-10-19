@@ -44,7 +44,7 @@ class PollCreateView(CreateView):
     form_class = PollForm
 
     def get_success_url(self):
-        return reverse('article_view', kwargs={'pk': self.object.pk})
+        return reverse('poll_view', kwargs={'pk': self.object.pk})
 
 
 class PollUpdateView(UpdateView):

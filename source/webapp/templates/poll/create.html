@@ -3,7 +3,12 @@
 {% block title %}Create Poll{% endblock %}
 
 {% block content %}
-    <h1>Create Poll</h1>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Create Poll</h1>
+            <p class="lead">Make a new poll</p>
+        </div>
+    </div>
     <form method="POST" action="{% url 'poll_add' %}">
         {% include 'partial/form.html' with button_text="Create" %}
     </form>

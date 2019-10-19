@@ -1,7 +1,9 @@
 {% extends 'base.html' %}
 {% block title %}Update Poll{% endblock %}
 {% block menu %}
-    <li><a href="{% url 'poll_view' poll.pk %}">View</a></li>
+    <li class="nav-item">
+        <a class="nav-link" href="{% url "poll_view" poll.pk %}">View</a>
+    </li>
 {% endblock %}
 
 {% block content %}
@@ -9,4 +11,5 @@
     <form method="POST" action="{% url 'poll_update' poll.pk %}">
         {% include 'partial/form.html' with button_text="Update" %}
     </form>
+
 {% endblock %}

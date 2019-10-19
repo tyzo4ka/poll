@@ -1,24 +1,39 @@
 {% extends 'base.html' %}
 
 {% block menu %}
-    <li><a href="{% url 'poll_add' %}">Add Poll</a></li>
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'poll_add' %}">Add Poll</a>
+    </li>
 {% endblock %}
 
 {% block content %}
-    <h1>Polls:</h1>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Polls</h1>
+            <p class="lead">Here you can see all created polls</p>
+        </div>
+    </div>
+{#    <h1>Polls:</h1>#}
 {#    {% include 'partial/simple_search.html' %}#}
     {% if is_paginated %}
         {% include 'partial/pagination.html' %}
     {% endif %}
     <hr/>
     {% for poll in polls %}
-        <h2>{{ poll.question }}</h2>
-        <p>Created at {{ poll.created_date|date:'d.m.Y H:i:s' }}</p>
-        <p>
-            <a href="{% url 'poll_view' poll.pk %}">More...</a>
-            <a href="{% url 'poll_update' poll.pk %}">Edit</a>
-            <a href="{% url "poll_delete" poll.pk %}">Delete</a>
-        </p>
+
+        <div class="card">
+{#          <div class="card-header">#}
+{#            Featured#}
+{#          </div>#}
+          <div class="card-body">
+            <h5 class="card-title">{{ poll.question }}</h5>
+            <p class="card-text">Created at {{ poll.created_date|date:'d.m.Y H:i:s' }}</p>
+            <a href="{% url 'poll_view' poll.pk %}" class="btn btn-primary">More</a>
+            <a href="{% url 'poll_update' poll.pk %}" class="btn btn-secondary">Edit</a>
+            <a href="{% url "poll_delete" poll.pk %}" class="btn btn-danger">Delete</a>
+          </div>
+        </div>
+
         <hr/>
     {% endfor %}
     {% if is_paginated %}
