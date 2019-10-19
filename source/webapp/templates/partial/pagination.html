@@ -1,7 +1,5 @@
 <nav aria-label="Polls naviagtion">
 <div class="pagination">
-{#    <form action="" method="GET">#}
-
         <li class="page-item">
             <a class="page-link" href="?{% if query %}{{ query }}&{% endif %}page=1">↞</a>
         </li>
@@ -27,12 +25,6 @@
                 </li>
             {% endif %}
         {% endfor %}
-
-{#        <li class="page-item">#}
-{#            Страница <input class="page-input" type="text" name="page" value="{{ page_obj.number }}" maxlength="5"> из {{ paginator.num_pages }}.#}
-{#        </li>#}
-
-
         {% if page_obj.has_next %}
             <li class="page-item">
                 <a class="page-link" href="?{% if query %}{{ query }}&{% endif %}page={{ page_obj.next_page_number }}">→</a>

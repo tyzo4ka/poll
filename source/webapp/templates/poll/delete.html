@@ -13,7 +13,6 @@
             <p class="lead">Are you sure want to delete this poll?</p>
         </div>
     </div>
-{#    <h1>Are you sure want to delete poll {{ poll }}</h1>#}
     <form method="POST" action="{% url 'poll_delete' poll.pk %}" class="text-center">
         {% csrf_token %}
             <input type="submit" value="Confirm" class="btn btn-danger">

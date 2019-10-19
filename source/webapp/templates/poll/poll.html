@@ -35,10 +35,10 @@
                     <div class="p-2 bd-highlight">
                         <a href="{% url 'choice_update' poll.pk %}" class="btn btn-primary">Edit</a>
                         <a href="{% url 'choice_delete' poll.pk %}" class="btn btn-danger">Delete</a>
+                        <a href="{% url 'poll_answer' poll.pk %}" class="btn btn-primary">Answer</a>
                     </div>
                 </div>
             </li>
-{#            </div>#}
         {% empty %}
             <p>No answers yet.</p>
         {% endfor %}
