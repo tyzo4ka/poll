@@ -17,7 +17,7 @@
         {% include 'partial/pagination.html' %}
     {% endif %}
     <div class="answer-list">
-        {% for choice in choices %}
+        {% for choice in poll.choices.all %}
             <div class="answer">
                 <p>{{ choice.text }}</p>
                 <p class="choice-links">
@@ -28,6 +28,7 @@
         {% empty %}
             <p>No answers yet.</p>
         {% endfor %}
+        <p><a href="{% url 'poll_choice_create' poll.pk %}">Add New Answer</a></p>>
     </div>
     {% if is_paginated %}
         {% include 'partial/pagination.html' %}
@@ -36,3 +37,4 @@
         {% include 'partial/form.html' with button_text='Add' %}
     </form>
 {% endblock %}
+

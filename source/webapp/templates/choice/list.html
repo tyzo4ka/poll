@@ -10,10 +10,10 @@
         {% include 'partial/pagination.html' %}
     {% endif %}
     {% for choice in choices %}
-        <div class="comment">
+        <div class="choice">
             <p>To poll: <a href="{% url 'poll_view' choice.poll.pk %}">{{ choice.poll }}</a></p>
             <div class="pre">{{ choice.text }}</div>
-            <p class="comment-links">
+            <p class="choice-links">
                 <a href="{% url 'choice_update' choice.pk %}">Edit</a>
                 <a href="{% url 'choice_delete' choice.pk %}">Delete</a>
             </p>
