@@ -60,5 +60,5 @@ class PollUpdateView(UpdateView):
 class PollDeleteView(DeleteView):
     model = Poll
     template_name = 'poll/delete.html'
-    context_object_name = 'article'
+    context_object_name = 'poll'
     success_url = reverse_lazy('index')

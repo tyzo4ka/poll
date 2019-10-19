@@ -1,5 +1,5 @@
 from django.shortcuts import get_object_or_404, redirect
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from webapp.forms import ChoiceForm, PollChoiceForm
 from webapp.models import Choice, Poll
@@ -46,6 +46,8 @@ class ChoiceUpdateView(UpdateView):
 
 class ChoiceDeleteView(DeleteView):
     model = Choice
+    template_name = 'choice/delete.html'
+    context_object_name = 'choice'
 
     def get(self, request, *args, **kwargs):
         return self.delete(request, *args, **kwargs)

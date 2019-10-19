@@ -5,8 +5,8 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Are you sure want to delete poll {{ poll }}?</h1>
-    <form method="POST" action="{% url 'poll_delete' article.pk %}" class="text-center">
+    <h1>Are you sure want to delete poll {{ poll }}</h1>
+    <form method="POST" action="{% url 'poll_delete' poll.pk %}" class="text-center">
         {% csrf_token %}
         <p><input type="submit" value="Confirm"></p>
         <p><a href="{% url 'poll_view' poll.pk %}">Cancel</a></p>

@@ -28,13 +28,11 @@
         {% empty %}
             <p>No answers yet.</p>
         {% endfor %}
-        <p><a href="{% url 'poll_choice_create' poll.pk %}">Add New Answer</a></p>>
+        <p><a href="{% url 'poll_choice_create' poll.pk %}">Add New Answer</a></p>
     </div>
     {% if is_paginated %}
         {% include 'partial/pagination.html' %}
     {% endif %}
-    <form action="{% url 'poll_choice_create' poll.pk %}" method="POST" id="add_choice">
-        {% include 'partial/form.html' with button_text='Add' %}
     </form>
 {% endblock %}
 
